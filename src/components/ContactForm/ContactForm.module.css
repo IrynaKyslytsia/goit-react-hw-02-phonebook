@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    padding: 20px;
+    outline: 2px solid black;
+};
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+};
+
+.form__input {
+    width: 80px;
+    margin-bottom: 20px;
+};
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+};
