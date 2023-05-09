@@ -23,14 +23,15 @@ class App extends Component {
       id: nanoid()
     };
     
-    this.setState((prevState) => {
-      return {contacts: [...prevState.contacts, newContact]}
-    });
 
     if (contacts.find(contact => contact.name === newContact.name)) {
       alert(`${newContact.name} is already in contacts.`);
       return;
-    }
+    };
+
+    this.setState((prevState) => {
+      return {contacts: [...prevState.contacts, newContact]}
+    });
   };
 
   deleteContact = (id) => {
@@ -59,7 +60,7 @@ class App extends Component {
           <ContactForm onAddContact={this.addContact} />        
           <h2>Contacts</h2>
           <Filter value={filter} onChange={this.handleChangeInFilter}/>
-          <ContactList contacts={this.getFilteredContacts()} onDelete={this.deleteContact} />        
+          <ContactList contacts={this.getFilteredContacts()} onDeleteContact={this.deleteContact} />        
       </div>
     );
   };
