@@ -4,13 +4,13 @@ import css from 'components/ContactList/ContactList.module.css';
 
 
 const ContactListItem = (contacts, onDeleteContact) => {
-    const { name, number } = contacts;
+    const { name, number, id } = contacts;
     return (
         <>
             <p>{name}: {number}</p>
             <button className={css.delete__btn} 
             type="button" 
-            onClick={onDeleteContact}>Delete</button>
+            onClick={() => {onDeleteContact(id)}}>Delete</button>
         </>
      );
         };

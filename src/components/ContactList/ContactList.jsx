@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import ContactListItem from "components/ContactListItem/ContactListItem";
-import css from 'components/ContactListItem/ContactListItem.module.css';
+import css from 'components/ContactList/ContactList.module.css';
 
 const ContactList = ({ contacts, deleteContact }) => {
     return (
@@ -11,7 +11,7 @@ const ContactList = ({ contacts, deleteContact }) => {
                 <ContactListItem 
                 name={name}
                 number={number}
-                onDeleteContact={() => {deleteContact(id)}} />
+                onDeleteContact={deleteContact} />
               </li>
             ))}
         </ul>
