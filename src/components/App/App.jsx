@@ -21,8 +21,7 @@ class App extends Component {
     const newContact = {
       ...data,
       id: nanoid()
-    };
-    
+    };    
 
     if (contacts.find(contact => contact.name === newContact.name)) {
       alert(`${newContact.name} is already in contacts.`);
